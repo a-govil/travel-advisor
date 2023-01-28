@@ -2,12 +2,12 @@ import React from 'react';
 import GoogleMapReact from 'google-map-react';
 import {Paper,Typography, useMediaQuery} from '@material-ui/core';
 import LocationOutlinedIcon from '@material-ui/icons/LocationOnOutlined';
-import Rating from '@material-ui/lab';
+import Rating from '@material-ui/lab/Rating';
 import useStyles from'./styles';
 
 const Map = ({setCoordinates,setBounds,coordinates,places}) => {
     const classes = useStyles();
-    const isMobile=useMediaQuery('(min-width:600px)');
+    const isDesktop=useMediaQuery('(min-width:600px)');
 
     return (
         <div className={classes.mapContainer}>
@@ -32,7 +32,7 @@ const Map = ({setCoordinates,setBounds,coordinates,places}) => {
                         key={1}
                     >
                         {
-                            isMobile ? (
+                            !isDesktop ? (
                                 <LocationOutlinedIcon color="primary" fontSize="large"/>
                             ):(
                                 <Paper elevation={3} className={classes.paper}>
@@ -45,6 +45,7 @@ const Map = ({setCoordinates,setBounds,coordinates,places}) => {
                                         alt={place.name}
 
                                     />
+                                    <Rating size="small" value={Number(place.rating)} readOnly/>
                                 </Paper>  
                             )
 
