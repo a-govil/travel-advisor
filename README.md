@@ -1,4 +1,4 @@
-# Travel Advisory
+# Travel Advisor
 A React-based travel advisory application built using the React framework and Rapid API.
 
 ## Getting Started
