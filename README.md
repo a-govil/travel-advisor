@@ -12,6 +12,9 @@ A React-based travel advisory application built using the React framework and Ra
 - Sort the results by rating, ranging from 3 to 5 stars.
 - Easy-to-use interface to search for information on restaurants and attractions.
 
+<img width="1448" alt="image" src="https://user-images.githubusercontent.com/44673944/216249993-a6d718c3-3de0-453b-8f60-aaaa7a810c98.png">
+
+
 ## Technologies Used
 - React
 - Rapid API
